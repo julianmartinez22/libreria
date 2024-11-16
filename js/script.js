@@ -4,9 +4,14 @@ import { Validate } from "./validations.js";
 
 const book = new Book();
 
+const editBookForm = document.getElementById("editBookForm");
 const bookForm = document.getElementById("bookForm");
 const validator = new Validate(); 
 
+
+document.addEventListener("DOMContentLoaded", function() {
+    book.showBooks();
+})
 
 bookForm.addEventListener('submit', function(event) {
 
@@ -55,12 +60,13 @@ bookForm.addEventListener('submit', function(event) {
     }
 
     bookObject = {
-        id,
+        id,  
+        image,
         title,
         author,
         pages,
-        image,
-        description
+        description,
+        
     }
     
    book.addBook(bookObject);
@@ -68,4 +74,19 @@ bookForm.addEventListener('submit', function(event) {
     // Si necesitas limpiar el formulario después de agregar el libro (opcional)
     bookForm.reset();
 
-})
+});
+
+
+editBookForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    book.saveBookChanges();
+});
+
+
+window.removeBook = function(id) {
+    book.removeBook(id);
+};
+
+window.editBook = function(id) {
+    book.editBook(id);
+};
