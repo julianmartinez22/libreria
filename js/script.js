@@ -90,3 +90,4 @@ window.removeBook = function(id) {
 window.editBook = function(id) {
     book.editBook(id);
 };
+

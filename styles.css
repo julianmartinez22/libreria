@@ -1,0 +1,30 @@
+
+body {
+    color: white;
+    background-color: rgb(11, 28, 43);
+}
+
+#img-logo {
+    height: 50vh;
+    width: 40vw;
+    margin-bottom: 0px;
+}
+
+h3 {
+    color: rgb(11, 28, 43);
+    font-weight: bolder;
+}
+
+.btn-sizing {
+    width: 81.59px;
+    height: 37.33px;
+}
+
+.book-img {
+    transition: transform 0.3s ease; /* Suaviza la animación */
+  }
+  
+.book-img:hover {
+    transform: scale(3.0); /* Aumenta el tamaño un 5% */
+  }
+

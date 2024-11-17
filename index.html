@@ -14,10 +14,10 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container mt-5">
+    <div class="container mt-0 text-center">
       <div class="overlay">
-        <h1 class="text-center mb-4 fw-bold">Gestor de Libros</h1>
-
+        <div><img src="assets\logo pequeño.png" alt="" id="img-logo">
+        </div>
         <div class="input-group mb-4">
           <input
             type="text"
@@ -68,7 +68,7 @@
           </form>
         </div>
 
-        <table class="table table-hover text-center" id="books-table">
+        <table class="table table-hover text-center " id="books-table">
           <thead class="table-dark">
             <tr>
               <th>Id</th>
@@ -80,12 +80,12 @@
               <th>Acciones</th>
             </tr>
           </thead>
-          <tbody id="book-list"></tbody>
+          <tbody id="book-list">
+          </tbody>
         </table>
       </div>
     </div>
 
-    <!-- Modal para Editar Libro -->
     <div
       class="modal fade"
       id="editBookModal"
